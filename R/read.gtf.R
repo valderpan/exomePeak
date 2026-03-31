@@ -12,7 +12,7 @@
   # use provided annotation data file
   if (!is.na(PARAMETERS$GENE_ANNO_GTF) & is.na(PARAMETERS$TXDB) ) {
     op <- options(warn = (-1))
-    txdb=makeTxDbFromGFF(PARAMETERS$GENE_ANNO_GTF,format="gtf")
+    txdb=txdbmaker::makeTxDbFromGFF(PARAMETERS$GENE_ANNO_GTF,format="gtf")
     options(op)
   }
   
